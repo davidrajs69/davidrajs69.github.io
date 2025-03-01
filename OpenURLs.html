@@ -5,8 +5,6 @@ document.onreadystatechange = function(){
         var url = new URL(window.location.href);
         var URL1 = url.searchParams.get("URL1");
         var URL2 = url.searchParams.get("URL2");
-        alert(URL1);
-        alert(URL2);
         if(URL2)
             window.open(URL2)
         if(URL1)
