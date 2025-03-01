@@ -1,8 +1,18 @@
 <head>
 <script type="text/javascript">
-document.onreadystatechange = function(){//window.addEventListener('readystatechange',function(){...}); (for Netscape) and window.attachEvent('onreadystatechange',function(){...}); (for IE and Opera) also work
-    if(document.readyState=='loaded' || document.readyState=='complete')
+document.onreadystatechange = function(){
+    if(document.readyState=='loaded' || document.readyState=='complete'){
         alert('Loaded');
+        var url = new URL(window.location.href);
+        var URL1 = url.searchParams.get("URL1");
+        var URL2 = url.searchParams.get("URL2");
+        alert(URL1);
+        alert(URL2);
+        if(URL2)
+            window.open(URL2)
+        if(URL1)
+            window.location.href(URL1);
+    }
 }
 </script>
 </head>
