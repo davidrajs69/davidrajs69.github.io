@@ -2,7 +2,7 @@
 <script type="text/javascript">
 document.onreadystatechange = function(){
     if(document.readyState=='loaded' || document.readyState=='complete'){
-        alert('Loaded');
+        alert('Loaded - v1');
         var url = new URL(window.location.href);
         var URL1 = url.searchParams.get("URL1");
         var URL2 = url.searchParams.get("URL2");
@@ -11,7 +11,7 @@ document.onreadystatechange = function(){
         if(URL2)
             window.open(URL2)
         if(URL1)
-            window.location.href(URL1);
+            window.open(URL1,"_self")
     }
 }
 </script>
